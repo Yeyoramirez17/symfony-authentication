@@ -1,0 +1,22 @@
+{% extends 'layouts/auth.html.twig' %}
+
+{% block title %}Password Reset Email Sent!{% endblock %}
+
+{% block page_title %}Password Reset Email Sent!{% endblock %}
+
+{% block card_title %}Check your email{% endblock %}
+
+{% block card_content %}
+
+    <p class="text-gray-600 dark:text-gray-400">
+        If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+        This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p class="text-gray-600 dark:text-gray-400">
+        If you don't receive an email please check your spam folder or
+        <a
+                class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline"
+                href="{{ path('app_forgot_password_request') }}"
+        >try again</a>.
+    </p>
+{% endblock %}

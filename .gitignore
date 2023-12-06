@@ -1,10 +1,42 @@
 
 ###> symfony/framework-bundle ###
+/config/secrets/prod/prod.decrypt.private.php
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+
+###< symfony/webpack-encore-bundle ###
+
+# Directorios generados por Composer
+/vendor/
+
+# Directorio generado por Symfony Flex
+/var/
+
+# Directorios de logs y caches
+/var/log/
+/var/cache/
+
+# Archivos de configuración local
 /.env.local
 /.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
+
+# Directorios generados por el sistema de pruebas PHPUnit
+/phpunit/
+
+# Archivos de entorno
+/.env*
+
+# Archivos de configuración del servidor web
 /public/bundles/
-/var/
-/vendor/
-###< symfony/framework-bundle ###
+
+# Otros archivos/directorios específicos
+/nbproject/
+/Tests/
+/test/
+/phpunit.xml
+/.phpstorm.meta.php
+/.phpstorm.meta.php.meta
